@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Responsive</title>
+    <title>Responsive Table</title>
     <style>
-        html, body {
+        body, html {
             margin: 0;
             padding: 0;
-            width: 100%;
             height: 100%;
+            width: 100%;
         }
-
         table {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             border-collapse: collapse;
+            table-layout: fixed;
         }
-
         td {
             border: 1px solid black;
             text-align: center;
-            vertical-align: middle;
             font-size: 2vw;
         }
     </style>
 </head>
 <body>
-
     <table>
         <tr>
-            <td style="background-color: #b8c480;">
-                First cell
+            <td style="background-color: #89fca6;">
+                First cell (Responsive)
             </td>
-            <td style="background-color: #f4b4a0;">
-                Second cell
+            <td style="background-color: #f77f7f;">
+                Second cell (Responsive)
             </td>
         </tr>
     </table>

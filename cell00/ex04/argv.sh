@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # ตรวจสอบว่าจำนวน argument ($#) เท่ากับ 0 หรือไม่
+
 if [ $# -eq 0 ]; then
     echo "No arguments supplied"
 else

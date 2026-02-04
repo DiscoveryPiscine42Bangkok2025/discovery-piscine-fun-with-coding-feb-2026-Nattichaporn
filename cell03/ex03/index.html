@@ -3,11 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <title>To Do</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #f5f7fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .todo-container {
+      background: white;
+      width: 300px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin: 0 0 15px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #f576ee;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #f576ee;
+    }
+
+    #ft_list {
+      margin-top: 15px;
+    }
+
+    #ft_list div {
+      background: #f1f5f9;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    #ft_list div:hover {
+      background: #e2e8f0;
+    }
+  </style>
 </head>
+
 <body>
 
-  <button id="new">New</button>
-  <div id="ft_list"></div>
+  <div class="todo-container">
+    <h1>📝 TO DO</h1>
+    <button id="new">+ New Task</button>
+    <div id="ft_list"></div>
+  </div>
 
   <script src="todo.js"></script>
 </body>
