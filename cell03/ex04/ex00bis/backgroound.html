@@ -2,25 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Background Color</title>
+    <title>Change background</title>
+    <link rel="stylesheet" href="background.css">
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- เรียกใช้ jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <button id="changeBtn">Click me!</button>
 
     <script>
         $(document).ready(function () {
-            $("#change").click(function () {
-                let colors = ["red", "green", "blue", "yellow", "pink", "purple"];
-                let random = Math.floor(Math.random() * colors.length);
-                $("body").css("background-color", colors[random]);
+            $("#changeBtn").click(function () {
+                let r = Math.floor(Math.random() * 256);
+                let g = Math.floor(Math.random() * 256);
+                let b = Math.floor(Math.random() * 256);
+
+                $("body").css(
+                    "background-color",
+                    "rgb(" + r + "," + g + "," + b + ")"
+                );
             });
         });
     </script>
-</head>
-
-<body>
-
-<button id="change">Click me!</button>
 
 </body>
 </html>

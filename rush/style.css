@@ -1,23 +1,253 @@
 body {
   padding-top: 70px;
   background-color: #f5f7fb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  color: #1d1d1f;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .section-padding {
-  padding: 100px 0;
+  padding: 60px 0;
 }
 
 .box-card {
   background: white;
-  padding: 30px;
-  border-radius: 15px;
+  padding: 40px;
+  border-radius: 30px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.profile-img {
+.box-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.profile-preview {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
   object-fit: cover;
+  border-radius: 50%;
   margin-bottom: 20px;
+  border: 5px solid #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn-custom {
+  background-color: #007aff;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 30px;
+  border: none;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.btn-custom:hover {
+  background-color: #005bb5;
+  transform: translateY(-2px);
+  color: white;
+}
+
+footer {
+  margin-top: auto;
+  background: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.apple-divider {
+  height: 1px;
+  background-color: #d2d2d7;
+  margin: 60px auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.profile-header-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.showcase-card {
+  background: white;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.showcase-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+.showcase-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: #eee;
+}
+
+.showcase-body {
+  padding: 30px;
+}
+
+.showcase-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.showcase-desc {
+  font-size: 0.95rem;
+  color: #6e6e73;
+  line-height: 1.6;
+}
+
+.activity-card {
+  background: white;
+  border-radius: 24px;
+  padding: 40px 35px;
+  min-height: 320px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.act-icon {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+}
+
+.act-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.act-desc {
+  font-size: 1rem;
+  color: #6e6e73;
+  line-height: 1.6;
+}
+
+.skill-box {
+  background: white;
+  border-radius: 24px;
+  padding: 50px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.skill-item {
+  margin-bottom: 30px;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.progress {
+  height: 10px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+}
+
+.progress-bar {
+  background-color: #0071e3;
+}
+
+.contact-section {
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.contact-card {
+  background: white;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  max-width: 900px;
+  margin: auto;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.contact-row:last-child {
+  border-bottom: none;
+}
+
+.contact-label {
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  gap: 15px;
+}
+
+.contact-value {
+  font-size: 1.2rem;
+}
+
+.contact-value a {
+  color: #0071e3;
+  text-decoration: none;
+}
+
+.contact-value a:hover {
+  text-decoration: underline;
+}
+
+/*Responsive */
+@media (max-width: 576px) {
+  .contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
